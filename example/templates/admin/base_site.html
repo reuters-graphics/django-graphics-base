@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+{% load graphics_base_manifest %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-graphics-logo/svg/graphics-logo-light.svg" /> Admin</a></h1>
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+{% vite_hmr %}
+{% vite 'src/admin.js' %}
+{% endblock %}

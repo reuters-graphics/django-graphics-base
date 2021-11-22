@@ -1,0 +1,24 @@
+{
+  "src/admin.js": {
+    "file": "assets/admin.5c35a2bc.js",
+    "src": "src/admin.js",
+    "isEntry": true,
+    "css": [
+      "assets/admin.58ab778f.css"
+    ]
+  },
+  "src/home.js": {
+    "file": "assets/home.a6028227.js",
+    "src": "src/home.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor.fbafc88b.js"
+    ],
+    "css": [
+      "assets/home.0fa2b1c8.css"
+    ]
+  },
+  "_vendor.fbafc88b.js": {
+    "file": "assets/vendor.fbafc88b.js"
+  }
+}

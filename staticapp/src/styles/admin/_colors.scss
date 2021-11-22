@@ -1,0 +1,109 @@
+@import "nord";
+/* VARIABLE DEFINITIONS */
+
+:root {
+  
+  --primary: #{$nord2};
+  --secondary: #{$nord2};
+  --accent: #f5a75d;
+  --primary-fg: #fff;
+
+  --body-fg: #{$nord2};
+  --body-bg: #fff;
+  --body-quiet-color: #{$nord3};
+  --body-loud-color: #{$nord0};
+
+  --header-color: #{$nord4};
+  --header-branding-color: var(--accent);
+  --header-bg: var(--secondary);
+  --header-link-color: var(--body-bg);
+
+  --breadcrumbs-fg: var(--body-bg);
+  --breadcrumbs-link-fg: var(--body-bg);
+  --breadcrumbs-bg: var(--primary);
+
+  --link-fg: #{$nord0};
+  --link-hover-color: #{$nord0};
+  --link-selected-fg: #{$nord0};
+
+  --hairline-color: #aaa;
+  --border-color: #{$nord0};
+
+  --error-fg: #{darken($nord11, 40%)};
+
+  --message-success-bg: #{$nord14};
+  --message-warning-bg:  #{$nord13};
+  --message-error-bg: #{$nord11};
+
+  --darkened-bg: #{$nord4}; /* A bit darker than --body-bg */
+  --selected-bg: #{darken($nord4, 10%)}; /* E.g. selected table cells */
+  --selected-row: #{darken($nord4, 10%)};
+
+  --button-fg: #fff;
+  --button-bg: #{$nord9};
+  --button-hover-bg: #{darken($nord9, 20%)};
+  --default-button-bg: #{$nord10};
+  --default-button-hover-bg: #{darken($nord10, 20%)};
+  --close-button-bg: #{$nord10};
+  --close-button-hover-bg: #{darken($nord10, 20%)};
+  --delete-button-bg: #{$nord11};
+  --delete-button-hover-bg: #{darken($nord11, 20%)};
+
+  --object-tools-fg: var(--button-fg);
+  --object-tools-bg: var(--close-button-bg);
+  --object-tools-hover-bg: var(--close-button-hover-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: var(primary);
+    --secondary: var(secondary);
+    --accent: var(accent)
+    --primary-fg: var(primary-fg);
+
+    --body-fg: var(body-fg);
+    --body-bg: var(body-bg);
+    --body-quiet-color: var(body-quiet-color);
+    --body-loud-color: var(body-loud-color);
+
+    --header-color: var(header-color);
+    --header-branding-color: var(accent);
+    --header-bg: var(secondary);
+    --header-link-color: var(primary-fg);
+
+    --breadcrumbs-fg: var(breadcrumbs-fg);
+    --breadcrumbs-link-fg: var(body-bg);
+    --breadcrumbs-bg: var(primary);
+
+    --link-fg: var(link-fg);
+    --link-hover-color: var(link-hover-color);
+    --link-selected-fg: var(link-selected-fg);
+
+    --hairline-color: var(hairline-color);
+    --border-color: var(border-color);
+
+    --error-fg: var(error-fg);
+
+    --message-success-bg: var(message-success-bg);
+    --message-warning-bg: var(message-warning-bg);
+    --message-error-bg: var(message-error-bg);
+
+    --darkened-bg: var(darkened-bg); /* A bit darker than --body-bg */
+    --selected-bg: var(selected-bg); /* E.g. selected table cells */
+    --selected-row: var(selected-row);
+
+    --button-fg: var(button-fg);
+    --button-bg: var(primary);
+    --button-hover-bg: var(button-hover-bg);
+    --default-button-bg: var(secondary);
+    --default-button-hover-bg: var(default-button-hover-bg);
+    --close-button-bg: var(close-button-bg);
+    --close-button-hover-bg: var(close-button-hover-bg);
+    --delete-button-bg: var(delete-button-bg);
+    --delete-button-hover-bg: var(delete-button-hover-bg);
+
+    --object-tools-fg: var(button-fg);
+    --object-tools-bg: var(close-button-bg);
+    --object-tools-hover-bg: var(close-button-hover-bg);
+  }
+}

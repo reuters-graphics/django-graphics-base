@@ -1,0 +1,20 @@
+#user-tools a {
+  border-bottom-color: var(--secondary);
+  color: var(--body-bg);
+  &:focus,
+  &:hover {
+    border-bottom-color: var(--body-bg);
+    color: var(--body-bg);
+  }
+}
+
+div.breadcrumbs {
+  margin-top: 1px;
+  a {
+    border-bottom: 1px solid var(--secondary);
+    &:hover {
+      border-bottom: 1px solid var(--body-bg);
+      text-decoration: none;
+    }
+  }
+}
