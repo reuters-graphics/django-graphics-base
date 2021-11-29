@@ -81,7 +81,7 @@ MEDIA_URL = "/media/"
 
 # When true, Vite assets are served from dev with HMR.
 # Setting to false serves built Vite assets from staticfiles.
-GRAPHICS_BASE_VITE_DEV_MODE = False
+GRAPHICS_BASE_VITE_DEV_MODE = True
 
 # Port of Vite dev server
 GRAPHICS_BASE_VITE_SERVER_PORT = 3000

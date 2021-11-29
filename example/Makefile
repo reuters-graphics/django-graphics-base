@@ -3,6 +3,10 @@ bootstrap:
 	pipenv run python manage.py migrate
 	pipenv run python manage.py createsuperuser
 
+migrations:
+	pipenv run python manage.py makemigrations
+
+
 develop:
 	pipenv run python manage.py migrate
 	pipenv run python manage.py runserver
