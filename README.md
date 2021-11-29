@@ -26,8 +26,44 @@
 
    urlpatterns = [
       # ...
-      path("graphics_base/", include("graphics_base.urls")),
+      path("", include("graphics_base.urls")),
    ]
    ```
 
-4. Run `python manage.py migrate` to create the graphics_base models.
+4. Add a template to override admin styles:
+
+   ```python
+   # settings.py
+   TEMPLATES = [
+      {
+         "BACKEND": "django.template.backends.django.DjangoTemplates",
+         "DIRS": [BASE_DIR.parent / "templates"], # ADD THIS
+         "APP_DIRS": True,
+         "OPTIONS": {
+               "context_processors": [
+                  "django.template.context_processors.debug",
+                  "django.template.context_processors.request",
+                  "django.contrib.auth.context_processors.auth",
+                  "django.contrib.messages.context_processors.messages",
+               ]
+         },
+      }
+   ]
+   ```
+
+   ```jinja
+   <!-- tempaltes/admin/base_site.html -->
+   {% extends "admin/base_site.html" %}
+   {% load graphics_base_manifest %}
+
+   {% block branding %}
+   <h1 id="site-name"><a href="{% url 'admin:index' %}"><img src="https://graphics.thomsonreuters.com/style-assets/images/logos/reuters-graphics-logo/svg/graphics-logo-light.svg" /> Admin</a></h1>
+   {% endblock %}
+
+   {% block extrastyle %}
+   {{ block.super }}
+   {% vite 'src/admin.js' %}
+   {% endblock %}
+   ```
+
+5. Run `python manage.py migrate` to create the graphics_base models.
