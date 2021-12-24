@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [requires]
-python_version = "3"
+python_version = "3.9"
 
 [packages]
-django = ">=3.0"
+django = ">=4.0"
 djangorestframework = "*"
 dj-database-url = "*"
 graphics_base = { path = "./..", editable = true }

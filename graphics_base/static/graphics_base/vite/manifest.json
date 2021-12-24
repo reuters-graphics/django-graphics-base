@@ -8,17 +8,17 @@
     ]
   },
   "src/home.js": {
-    "file": "assets/home.a6028227.js",
+    "file": "assets/home.9ff87725.js",
     "src": "src/home.js",
     "isEntry": true,
     "imports": [
-      "_vendor.fbafc88b.js"
+      "_vendor.9c266c1b.js"
     ],
     "css": [
       "assets/home.0fa2b1c8.css"
     ]
   },
-  "_vendor.fbafc88b.js": {
-    "file": "assets/vendor.fbafc88b.js"
+  "_vendor.9c266c1b.js": {
+    "file": "assets/vendor.9c266c1b.js"
   }
 }
